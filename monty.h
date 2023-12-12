@@ -18,6 +18,9 @@
  * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO
  */
+
+char *buff;
+
 typedef struct stack_s
 {
         int n;
@@ -39,7 +42,8 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-extern stack_t *head;
-typedef void (*op_func)(stack_t **, unsigned int);
+/*handle*/
+void push(stack_t **stack, unsigned int line_number);
 
-
+/*print */
+void pall(stack_t **stack, unsigned int line_number);
